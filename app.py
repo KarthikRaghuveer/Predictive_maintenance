@@ -3,7 +3,7 @@ from flask import Flask,render_template,request
 import pickle
 
 app=Flask(__name__, template_folder='templates')
-model= pickle.load(open(r'C:\Users\User\Downloads\Predictive_maintenance\fail_detect.pkl','rb'))
+model= pickle.load(open('fail_detect.pkl','rb'))
 
 @app.route('/')
 def home():
