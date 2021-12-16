@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predicitive Machine Maintenance</title>
+  </head>
+
+<body>
+ <div class="login">
+	<h1>Machine Failure Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict_failure')}}"method="post">
+    	<input type="text" name="Type" placeholder="Type" required="required" />
+        <input type="text" name="Air temperature [K]" placeholder="Air temperature [K]" required="required" />\
+		<input type="text" name="Process temperature [K]" placeholder="Process temperature [K]" required="required" />
+		<input type="text" name="Rotational speed [rpm]" placeholder="Rotational speed [rpm]" required="required" />
+		<input type="text" name="Torque [Nm]" placeholder="Torque [Nm]" required="required" />
+		<input type="text" name="Tool wear [min]]" placeholder="Tool wear [min]" required="required" />
+		<input type="text" name="Failure Type" placeholder="Failure Type" required="required" />
+	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict the failure</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
