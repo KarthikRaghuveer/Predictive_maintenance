@@ -1,0 +1,7 @@
+pandas >=0.19
+numpy>=1.9.2
+matplotlib
+scikit-learn >=0.18
+imblearn
+Flask==1.1.1
+gunicorn==19.9.0
